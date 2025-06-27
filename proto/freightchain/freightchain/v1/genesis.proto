@@ -1,0 +1,17 @@
+syntax = "proto3";
+package freightchain.freightchain.v1;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "freightchain/freightchain/v1/params.proto";
+
+option go_package = "FreightChain/x/freightchain/types";
+
+// GenesisState defines the freightchain module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
