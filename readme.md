@@ -1,13 +1,13 @@
-![LogiChain Logo](./docs/images/logo.png)
-# LogiChain - Блокчейн-решение для логистики
+![CargoChain Logo](./docs/images/logo.png)
+# CargoChain - Блокчейн-решение для логистики
 
 ## 🚀 Революция в управлении цепочками поставок
 
-LogiChain - это инновационная блокчейн-платформа, созданная на базе Cosmos SDK, которая трансформирует логистические процессы вашей компании. Наше решение обеспечивает полную прозрачность, безопасность и эффективность в управлении грузоперевозками.
+CargoChain - это инновационная блокчейн-платформа, созданная на базе Cosmos SDK, которая трансформирует логистические процессы вашей компании. Наше решение обеспечивает полную прозрачность, безопасность и эффективность в управлении грузоперевозками.
 
 ## 📋 Оглавление
 
-- [Почему LogiChain?](#почему-logichain)
+- [Почему CargoChain?](#почему-CargoChain)
 - [Ключевые возможности](#ключевые-возможности)
 - [Быстрый старт](#быстрый-старт)
 - [Установка](#установка)
@@ -17,7 +17,7 @@ LogiChain - это инновационная блокчейн-платформ�
 - [Интеграция](#интеграция)
 - [Поддержка](#поддержка)
 
-## 🎯 Почему LogiChain?
+## 🎯 Почему CargoChain?
 
 ### Проблемы традиционной логистики:
 - ❌ Отсутствие прозрачности в цепочке поставок
@@ -72,8 +72,8 @@ LogiChain - это инновационная блокчейн-платформ�
 
 ```bash
 # Клонирование репозитория
-git clone https://github.com/yourcompany/logichain.git
-cd logichain
+git clone https://github.com/yourcompany/CargoChain.git
+cd CargoChain
 
 # Запуск в Docker
 docker-compose up -d
@@ -89,14 +89,14 @@ docker-compose up -d
 
 ```bash
 # Загрузка образа
-docker pull logichain/node:latest
+docker pull CargoChain/node:latest
 
 # Запуск ноды
-docker run -d --name logichain-node \
+docker run -d --name CargoChain-node \
   -p 26657:26657 \
   -p 1317:1317 \
-  -v logichain-data:/root/.logichain \
-  logichain/node:latest
+  -v CargoChain-data:/root/.CargoChain \
+  CargoChain/node:latest
 ```
 
 ### Вариант 2: Компиляция из исходников
@@ -109,10 +109,10 @@ make install-deps
 make build
 
 # Инициализация
-./build/logichaind init mynode --chain-id logichain-1
+./build/CargoChaind init mynode --chain-id CargoChain-1
 
 # Запуск
-./build/logichaind start
+./build/CargoChaind start
 ```
 
 ## ⚙️ Конфигурация
@@ -127,7 +127,7 @@ company:
   api_key: "your-secure-api-key"
 
 network:
-  chain_id: "logichain-production"
+  chain_id: "CargoChain-production"
   rpc_port: 26657
   rest_port: 1317
 
@@ -141,10 +141,10 @@ integration:
 
 ```bash
 # Генерация конфигурации интеграции
-./logichaind config generate-integration --erp=SAP
+./CargoChaind config generate-integration --erp=SAP
 
 # Тестирование подключения
-./logichaind integration test --config=integration.yml
+./CargoChaind integration test --config=integration.yml
 ```
 
 ## 💼 Использование
@@ -153,7 +153,7 @@ integration:
 
 ```bash
 # CLI
-logichaind tx logistics create-shipment \
+CargoChaind tx logistics create-shipment \
   --from supplier \
   --to receiver \
   --goods "Electronics" \
@@ -176,10 +176,10 @@ curl -X POST http://localhost:1317/logistics/shipments \
 
 ```bash
 # Получение статуса
-logichaind query logistics shipment [shipment-id]
+CargoChaind query logistics shipment [shipment-id]
 
 # Полная история
-logichaind query logistics history [shipment-id]
+CargoChaind query logistics history [shipment-id]
 ```
 
 ### Веб-интерфейс
@@ -263,6 +263,6 @@ logichaind query logistics history [shipment-id]
 
 MIT License - свободное использование для коммерческих целей.
 
-**LogiChain** - будущее логистики уже здесь. Начните трансформацию вашего бизнеса сегодня!
+**CargoChain** - будущее логистики уже здесь. Начните трансформацию вашего бизнеса сегодня!
 
-*Разработано с ❤️ командой LogiChain*
+*Разработано с ❤️ командой CargoChain*
